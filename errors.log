@@ -1,0 +1,104 @@
+student_04_e3443a600226@cloudshell:~/zoo_guide_agent (qwiklabs-gcp-02-b4fdd5e3f86a)$ # Grant the "Agent Platform User" role to your service account
+gcloud projects add-iam-policy-binding $PROJECT_ID \
+  --member="serviceAccount:$SERVICE_ACCOUNT" \
+  --role="roles/aiplatform.user"
+Regional Access Boundary HTTP request failed after retries: response_data={'error': {'code': 404, 'message': 'Account not found for email: f36739fad|student-04-e3443a600226@qwiklabs.net', 'status': 'NOT_FOUND'}}, retryable_error=False
+Regional Access Boundary HTTP request failed after retries: response_data={'error': {'code': 404, 'message': 'Account not found for email: f36739fad|student-04-e3443a600226@qwiklabs.net', 'status': 'NOT_FOUND'}}, retryable_error=False
+Updated IAM policy for project [qwiklabs-gcp-02-b4fdd5e3f86a].
+bindings:
+- members:
+  - serviceAccount:222754049503-compute@developer.gserviceaccount.com
+  role: roles/aiplatform.user
+- members:
+  - serviceAccount:service-222754049503@gcp-sa-artifactregistry.iam.gserviceaccount.com
+  role: roles/artifactregistry.serviceAgent
+- members:
+  - serviceAccount:qwiklabs-gcp-02-b4fdd5e3f86a@qwiklabs-gcp-02-b4fdd5e3f86a.iam.gserviceaccount.com
+  role: roles/bigquery.admin
+- members:
+  - serviceAccount:222754049503-compute@developer.gserviceaccount.com
+  - serviceAccount:222754049503@cloudbuild.gserviceaccount.com
+  role: roles/cloudbuild.builds.builder
+- members:
+  - serviceAccount:service-222754049503@gcp-sa-cloudbuild.iam.gserviceaccount.com
+  role: roles/cloudbuild.serviceAgent
+- members:
+  - serviceAccount:222754049503@cloudservices.gserviceaccount.com
+  role: roles/compute.instanceGroupManagerServiceAgent
+- members:
+  - serviceAccount:service-222754049503@compute-system.iam.gserviceaccount.com
+  role: roles/compute.serviceAgent
+- members:
+  - serviceAccount:service-222754049503@container-analysis.iam.gserviceaccount.com
+  role: roles/containeranalysis.ServiceAgent
+- members:
+  - serviceAccount:222754049503-compute@developer.gserviceaccount.com
+  - serviceAccount:222754049503@cloudservices.gserviceaccount.com
+  role: roles/editor
+- members:
+  - serviceAccount:222754049503-compute@developer.gserviceaccount.com
+  role: roles/iam.serviceAccountUser
+- members:
+  - serviceAccount:222754049503-compute@developer.gserviceaccount.com
+  - serviceAccount:admiral@qwiklabs-services-prod.iam.gserviceaccount.com
+  - serviceAccount:qwiklabs-gcp-02-b4fdd5e3f86a@qwiklabs-gcp-02-b4fdd5e3f86a.iam.gserviceaccount.com
+  - user:student-04-e3443a600226@qwiklabs.net
+  role: roles/owner
+- members:
+  - serviceAccount:222754049503-compute@developer.gserviceaccount.com
+  role: roles/resourcemanager.projectIamAdmin
+- members:
+  - serviceAccount:222754049503-compute@developer.gserviceaccount.com
+  role: roles/run.admin
+- members:
+  - serviceAccount:222754049503-compute@developer.gserviceaccount.com
+  - user:student-04-e3443a600226@qwiklabs.net
+  role: roles/run.invoker
+- members:
+  - serviceAccount:service-222754049503@serverless-robot-prod.iam.gserviceaccount.com
+  role: roles/run.serviceAgent
+- members:
+  - serviceAccount:222754049503-compute@developer.gserviceaccount.com
+  role: roles/serverless.serviceAgent
+- members:
+  - serviceAccount:qwiklabs-gcp-02-b4fdd5e3f86a@qwiklabs-gcp-02-b4fdd5e3f86a.iam.gserviceaccount.com
+  role: roles/storage.admin
+- members:
+  - serviceAccount:222754049503-compute@developer.gserviceaccount.com
+  - user:student-04-e3443a600226@qwiklabs.net
+  role: roles/viewer
+etag: BwZVl-kM5xM=
+version: 1
+student_04_e3443a600226@cloudshell:~/zoo_guide_agent (qwiklabs-gcp-02-b4fdd5e3f86a)$ # Run the deployment command
+adk deploy cloud_run \
+  --project=$PROJECT_ID \
+  --region=$REGION \
+  --service_name=zoo-tour-guide \
+  --with_ui \
+  .
+WARNING: ADK Web is for development purposes. It has access to all data and should not be used in production.
+Start generating Cloud Run source files in /tmp/cloud_run_deploy_src/20260702_025323
+Copying agent source code...
+Copying agent source code completed.
+Creating Dockerfile...
+Creating Dockerfile complete: /tmp/cloud_run_deploy_src/20260702_025323/Dockerfile
+Deploying to Cloud Run...
+Regional Access Boundary HTTP request failed after retries: response_data={'error': {'code': 404, 'message': 'Account not found for email: f36739fad|student-04-e3443a600226@qwiklabs.net', 'status': 'NOT_FOUND'}}, retryable_error=False
+Regional Access Boundary HTTP request failed after retries: response_data={'error': {'code': 404, 'message': 'Account not found for email: f36739fad|student-04-e3443a600226@qwiklabs.net', 'status': 'NOT_FOUND'}}, retryable_error=False
+Regional Access Boundary HTTP request failed after retries: response_data={'error': {'code': 404, 'message': 'Account not found for email: f36739fad|student-04-e3443a600226@qwiklabs.net', 'status': 'NOT_FOUND'}}, retryable_error=False
+Regional Access Boundary HTTP request failed after retries: response_data={'error': {'code': 404, 'message': 'Account not found for email: f36739fad|student-04-e3443a600226@qwiklabs.net', 'status': 'NOT_FOUND'}}, retryable_error=False
+Regional Access Boundary HTTP request failed after retries: response_data={'error': {'code': 404, 'message': 'Account not found for email: f36739fad|student-04-e3443a600226@qwiklabs.net', 'status': 'NOT_FOUND'}}, retryable_error=False
+Regional Access Boundary HTTP request failed after retries: response_data={'error': {'code': 404, 'message': 'Account not found for email: f36739fad|student-04-e3443a600226@qwiklabs.net', 'status': 'NOT_FOUND'}}, retryable_error=False
+Regional Access Boundary HTTP request failed after retries: response_data={'error': {'code': 404, 'message': 'Account not found for email: f36739fad|student-04-e3443a600226@qwiklabs.net', 'status': 'NOT_FOUND'}}, retryable_error=False
+Building using Dockerfile and deploying container to Cloud Run service [zoo-tour-guide] in project [qwiklabs-gcp-02-b4fdd5e3f86a] region [us-east4]
+Building and deploying...                                                                                      
+  Validating configuration...done                                                                              
+  Uploading sources...-Regional Access Boundary HTTP request failed after retries: response_data={'error': {'code': 404, 'message': 'Account not found for email: f36739fad|student-04-e3443a600226@qwiklabs.net', 'status': 'NOT_FOUND'}}, retryable_error=False
+  Uploading sources...|INFO: Not using ignore file.                                                            
+INFO: Uploading [/tmp/tmpqvkvilbo/file.zip] to [run-sources-qwiklabs-gcp-02-b4fdd5e3f86a-us-east4/services/zoo-tour-guide/1782960807.443728-03b7d7e0ae1b46a181ca46ed73c79e05.zip]
+  Uploading sources...doneRegional Access Boundary HTTP request failed after retries: response_data={'error': {'code': 404, 'message': 'Account not found for email: f36739fad|student-04-e3443a600226@qwiklabs.net', 'status': 'NOT_FOUND'}}, retryable_error=False
+  Uploading sources...done                                                                                     
+  Building Container... Logs are available at [ https://console.cloud.google.com/cloud-build/builds;region=us-e
+  ast4/5e22b701-fb5b-4b80-ac70-ddc56cf66431?project=222754049503 ]..../Regional Access Boundary HTTP request failed after retries: response_data={'error': {'code': 404, 'message': 'Account not found for email: f36739fad|student-04-e3443a600226@qwiklabs.net', 'status': 'NOT_FOUND'}}, retryable_error=False
+
+  
